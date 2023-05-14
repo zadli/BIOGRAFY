@@ -1,0 +1,170 @@
+<!-- указание браузеру, как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>BIOGRAPHY</title>
+		<!--мета тег-->
+		<!--vieport отвечает за отображение окна контента-->
+		<!--в content указывается необходимая ширина (без адаптивности)-->
+		<meta name="vieport" content="1440">
+		<!--подключение файла CSS для стилизации и оформления элементов.-->
+		<link rel="stylesheet" href="css/style.css"/>
+		<!--Определение кодировки страницы (какую кодировку браузеру нужно использовать), мета тег-->
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	</head>
+	<!--тело документа, включающее теги, атрибуты, текст и изображения. Отображается в браузере.-->
+	<body>
+		
+		<!--тег с атрибутом class, для связи с каскадными таблицами стилей-->
+		<div class="wrapper">
+			<section class="first"> <!--секция для одного типа содержания.в данном случае - 1 слайд -->
+				<div class="header__container ">
+					<div class="logo">
+						<div class="menu__item"><a class="menu__link">BIOGRAPHY</a></div>
+					</div>
+					<div class="menu__list">
+						<div class="any__info">
+							<div class="menu__item">
+								<!--href - куда мы перейдем, если нажмем-->
+								<a href="https://t.me/D_doshik_10" target="_blank" class="menu__link"><img src="./img/photo.png" width="45" alt="Photo"></a>
+							</div>
+							<div class="button">
+								<a class="menu__link">Информация обо мне</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>	
+					<div class="name__container">
+						<div class="name__content">
+								<div class="name__row">
+									<div class="name__title">
+										Кто я ?
+									</div>
+									<div class="name__block">
+										<div class="name__text">
+											Замысловатый вопрос, на который так сложно порою дать ответ
+										</div>
+										<div class="name__text">
+											Именно на этом сайте , вы сможете получить ответ  на данный вопрос!
+										</div>
+									</div>
+									
+								</div>
+						</div>
+					</div>
+			</section>
+			<section class="about">
+				<div class="about__container">
+					<div class="about__content">
+						<div class="about__block">
+							<div class="name__title ">Вкратце обо мне</div>
+							<div class="about__text">
+								<div class="subtext name__text">
+									Всем привет. Меня зовут Дарья.											
+								</div>
+							</div>
+						</div>
+						<div class="about__squad">
+							<div class="about__column">
+								<div class="about__row">
+									<img src="./img/block.jpg" alt="" class="" width="70" height="70">
+									<div class="about__subtext">Я учусь на третьем курсе Ульяновского государственного 
+										<p>университета и работаю там же, на кафедре</p>
+										<p>Информационных технологий.</p></div>
+								</div>
+								<div class="about__row">
+									<img src="./img/block.jpg" alt="" class="" width="70" height="70">
+									<div class="about__subtext">Моя жизнь довольно разнообразная. В свободное от учебы  
+										<p>и работы время я занимаюсь репетиторством по</p>
+										<!--тег р определяет строчный абзац-->
+										<p>математике.</p></div>
+								</div>
+								<div class="about__row">
+									<!--src - путь к картинке, которую мы хотим подключить-->
+									<!--alt - написание альтернативного текста, который покажется, если наша картинка не подключится. Но, его можно оставить пустым-->
+									<img src="./img/block.jpg" alt="" class="" width="70" height="70">
+									<div class="about__subtext">Также, прохожу обучение на наставника от федеральной программы 
+										<p>"Я в деле", при поддержке Российского</p>
+										<p>экономического университета им. Г.В.Плеханова, обучаю</p>
+										<p>ребят бизнесу, помогаю им разрабатывать бизнес-проекты.</p>
+									</div>
+								</div>
+							</div>
+							<div class="about__image">
+								<img src="./img/kast.png" alt="" class="about__image" style="width: 110%;">
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			<section class="images">
+				<div class="images__container">
+					<div class="slider">
+						<div class="slider__item item">
+							<img src="./img/pic-1.jpg" alt="">
+						</div>
+						<div class="slider__item item">
+							<img src="./img/pic-2.jpg" alt=""  >
+						</div>
+						<div class="slider__item item">
+							<!--тег для вставки изображений в страницу-->
+							<img src="./img/pic-3.jpg" alt="" >
+						</div>
+						<div class="slider__item item">
+							<img src="./img/pic-4.jpg" alt="" >
+						</div>
+						   <!-- Кнопки-стрелочки -->
+						<a class="previous" onclick="previousSlide()">&#10094;</a>
+						<a class="next" onclick="nextSlide()">&#10095;</a>
+					</div>
+				</div>
+				
+			</section>
+			<section class="end">
+				<div class="end__container">
+					<div class="end__information">
+						<div class="end__column">
+							<div class="name__title call__info">Мои Контакты</div>
+							<div class="call">
+								<div class="sub__title">Телефон: +7 (927) - 826 - 86 - 12</div>
+								<div class="sub__title">Почта: uldashak@mail.ru</div>
+							</div>
+							<div class="menu__item">
+								<a href="https://t.me/D_doshik_10" target="_blank" class="menu__link"><img src="./img/photo.png" width="45" alt="Photo"></a>
+							</div>
+							<div class="end__contacts"></div>
+						</div>
+						<div>
+							<form action="send.php" method="POST">
+								<div class="subject__border">
+									<select name="subject">
+										<option selected value="Тема письма">Тема Письма</option>
+										<option value="Вопрос">Вопрос</option>
+										<option value="Личный вопрос">Личный вопрос</option>
+										<option value="Просьба">Просьба</option>
+									</select>
+								</div>
+								<!--placeholder задает подпись поля-->
+							<!--type определяет метод приема данных от пользователя-->
+								<input placeholder = "Ваш e-mail" type="email" name="email" class="form__input" maxlength="50" required>
+								<textarea name="message" placeholder = "Ваще сообщение" class="form__input"  maxlength="150" required></textarea>
+								<!-- <a href="index.php" class=""> -->
+									<input  class="call__button" type="submit" value="Отправить письмо">
+								<!-- </a> -->
+							</form>
+						</div>	
+					</div>	
+				</div>		
+			</section>
+			<section class="notification">
+				<div class="notifi">
+					Ваще сообщение отправлено
+				</div>
+			</section>
+		</div>
+		<script src="./js/app.js "></script>
+	</body>
+</html>
+
