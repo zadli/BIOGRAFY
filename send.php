@@ -2,11 +2,11 @@
 // header('Content-Type: text/html; charset=utf-8');
 // mb_internal_encoding("UTF-8");
 
-/* для использования почты для рассылки - smtp, нгадо создать доп пароль почты для приложения!
+/* для использования почты для рассылки - smtp, надо создать доп пароль почты для приложения!
 https://yandex.ru/support/mail/mail-clients/others.html
-поэтому тут от я-почты пароль не тот, который для входа в ящик! */
+*/
 
-// Файлы phpmailer - как подключить - см github https://github.com/PHPMailer/PHPMailer
+// Файлы phpmailer - как подключить -github https://github.com/PHPMailer/PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception; 
 use PHPMailer\PHPMailer\SMTP; 
@@ -37,17 +37,14 @@ $body = "
 // Настройки PHPMailer
 $mail = new PHPMailer(true);
 try {
-    //$mail->SMTPDebug = SMTP::DEBUG_SERVER; 
-    //$mail->SMTPDebug = 2;
-    
+    //протокол передачи почты    
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth = true;
 
 
     /* настройки разных почт для отправки: https://snipp.ru/php/smtp-phpmailer */
-    // Настройки вашей почты
-    $mail->Host       = 'ssl://smtp.yandex.ru'; // SMTP сервера вашей почты
+    $mail->Host       = 'ssl://smtp.yandex.ru'; // SMTP сервера почты
     $mail->Username   = 'xsOrange'; // Логин на почте
     $mail->Password   = 'sdudxeeiblydzunq'; // Пароль на почте
     $mail->setFrom('xsorange@yandex.ru', 'sender'); // Адрес самой почты и имя отправителя
@@ -75,7 +72,7 @@ $status = 200;
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
-
+//отображение результата
 echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status], JSON_UNESCAPED_UNICODE );
 /* JSON_UNESCAPED_UNICODE для корректной передачи кириллицы */
 
